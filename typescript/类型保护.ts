@@ -109,11 +109,15 @@ function getAnimal(x: Bird1 | Dog1 ){
 // unknown类型, 未知的类型，和any一样也是顶级类型
 
 
-// 交叉类型
+// 交叉类型, 并不是并集也不是交集，要以子类型去理解
 interface A{name:string}
 interface B{age:number}
-type C = A&B;
+type C = A&B;   // C类型继能满足A类型又能满足B类型
 let c:C = {name:'zx', age:10}
+
+
+// keyof 拿到所有的key
+
 
 
 
